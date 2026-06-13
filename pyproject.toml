@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "embedsearch"
+version = "0.1.0"
+description = "Semantic + keyword hybrid search for local files"
+requires-python = ">=3.10"
+dependencies = [
+    "typer>=0.9",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "sentence-transformers>=3.0",
+    "sqlite-vec>=0.1.1",
+    "rank-bm25>=0.2.2",
+    "numpy>=1.26",
+    "pydantic>=2.0",
+    "tiktoken>=0.7",
+    "rich>=13.0",
+    "pyyaml>=6.0",
+    "apsw>=3.43.0",
+]
+
+[project.scripts]
+embedsearch = "embedsearch.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/embedsearch"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
