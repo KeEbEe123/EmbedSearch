@@ -1,5 +1,7 @@
 # EmbedSearch
 
+<video src="assets/demo.mp4" autoplay loop muted playsinline width="100%"></video>
+
 A semantic search CLI that indexes local files into vector embeddings and returns hybrid-ranked results combining keyword matching with semantic similarity. Built for developers who need to search across codebases, documentation, and notes with the intelligence of meaning — not just exact words.
 
 ---
